@@ -1,4 +1,4 @@
-const BASE = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
+const BASE = "https://duolingo-lite.onrender.com";
 
 async function call<T>(path: string, init?: RequestInit): Promise<T> {
   const res = await fetch(BASE + path, { cache: "no-store", headers: { "Content-Type": "application/json" }, ...init });
